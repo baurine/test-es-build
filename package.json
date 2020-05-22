@@ -37,8 +37,9 @@
     ]
   },
   "devDependencies": {
-    "customize-cra": "^0.9.1",
+    "customize-cra": "^1.0.0-alpha.0",
     "esbuild-loader": "^1.1.0",
+    "less-loader": "^6.1.0",
     "react-app-rewired": "^2.1.6",
     "webpack-bundle-analyzer": "^3.8.0"
   }

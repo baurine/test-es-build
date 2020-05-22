@@ -1,6 +1,7 @@
 const {
   override,
-  addBundleVisualizer,
+  // addBundleVisualizer,
+  addLessLoader,
   addWebpackPlugin,
 } = require('customize-cra')
 const { ESBuildPlugin } = require('esbuild-loader')
@@ -32,5 +33,13 @@ const useEsBuild = () => (config) => {
 
 module.exports = override(
   // addBundleVisualizer(),
+  addLessLoader({
+    lessOptions: {
+      javascriptEnabled: true,
+      modules: {
+        localIdentName: '[local]--[hash:base64:5]',
+      },
+    },
+  }),
   useEsBuild(),
 )
